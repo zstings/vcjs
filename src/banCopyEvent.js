@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         禁止copy事件绑定
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       @zstings
 // @match        *://*/*

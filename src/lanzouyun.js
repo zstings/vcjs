@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         蓝奏云密码填充
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       @zstings
 // @match        https://*.lanzouy.com/*
