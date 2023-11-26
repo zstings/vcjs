@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         小冰
+// @name         必应搜索小冰恢复
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
-// @author       You
+// @author       @zstings
 // @match        https://cn.bing.com/search*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
@@ -36,5 +36,4 @@
             };
         })
     }
-    // Your code here...
 })();

@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         禁止copy事件绑定
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
-// @author       You
+// @author       @zstings
 // @match        *://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
@@ -33,7 +33,6 @@
         const clicks = [...document.querySelectorAll('[' + onev + ']')]
         clicks.forEach(item => {
             item.removeAttribute(onev)
-            item.removeAttribute(onev)
         })
     })
 
@@ -44,5 +43,4 @@
         style.innerHTML = '*{user-select: auto!important;}'
         document.querySelector('head').appendChild(style)
     });
-    // Your code here...
 })();
