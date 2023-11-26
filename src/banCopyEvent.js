@@ -10,14 +10,14 @@
 // @run-at document-start
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
-    const ev = 'copy'
-    const onev = 'on' + ev
-    const o = { value: null, writable: false }
-    Object.defineProperty(HTMLElement.prototype, onev, o)
-    Object.defineProperty(Document.prototype, onev, o)
-    Object.defineProperty(window, onev, o)
+    const ev = 'copy';
+    const onev = 'on' + ev;
+    const o = { value: null, writable: false };
+    Object.defineProperty(HTMLElement.prototype, onev, o);
+    Object.defineProperty(Document.prototype, onev, o);
+    Object.defineProperty(window, onev, o);
 
     HTMLElement.prototype._addEventListener = Element.prototype.addEventListener;
     Document.prototype._addEventListener = Document.prototype.addEventListener;
@@ -27,20 +27,19 @@
     Window.prototype.addEventListener = _xaddEventListener;
     function _xaddEventListener(a, b, c) {
         if (a != ev && this && this._addEventListener) this._addEventListener(a, b, c);
-    };
+    }
 
-    window.addEventListener('DOMContentLoaded', function() {
-        const clicks = [...document.querySelectorAll('[' + onev + ']')]
-        clicks.forEach(item => {
-            item.removeAttribute(onev)
-        })
-    })
+    window.addEventListener('DOMContentLoaded', function () {
+        const clicks = [...document.querySelectorAll('[' + onev + ']')];
+        clicks.forEach((item) => {
+            item.removeAttribute(onev);
+        });
+    });
 
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const style = document.createElement('style')
-        style.type = 'text/css'
-        style.innerHTML = '*{user-select: auto!important;}'
-        document.querySelector('head').appendChild(style)
+    document.addEventListener('DOMContentLoaded', () => {
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = '*{user-select: auto!important;}';
+        document.querySelector('head').appendChild(style);
     });
 })();

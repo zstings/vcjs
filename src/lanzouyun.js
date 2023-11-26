@@ -10,10 +10,10 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
     window.addEventListener('load', () => {
-		document.querySelector('#pwd').value = new URLSearchParams(location.search.slice(1)).get('p');
-		(document.querySelector('.passwddiv-btn') || document.querySelector('#sub')).click();
-	})
+        document.querySelector('#pwd').value = new URLSearchParams(location.search.slice(1)).get('p');
+        (document.querySelector('.passwddiv-btn') || document.querySelector('#sub')).click();
+    });
 })();
