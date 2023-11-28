@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         禁止copy事件绑定
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       @zstings
 // @match        *://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
-// @run-at document-start
+// @run-at       document-start
 // ==/UserScript==
 
 (function () {
